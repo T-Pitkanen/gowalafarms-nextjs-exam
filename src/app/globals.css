@@ -1,0 +1,36 @@
+:root {
+  /* Global Variables */
+
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+
+  background-color: red;
+
+}
+
+
+@media screen and (min-width: 768px) {
+  html,
+  body {
+
+    background-color: green;
+  }
+  
+}
+
+@media screen and (min-width: 1024px) {
+  html,
+  body {
+
+    background-color: blue;
+  
+  }
+  
+}
