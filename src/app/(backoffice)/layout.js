@@ -1,4 +1,5 @@
 import styles from './layout.module.css';
+import Navigation from '@/components/backoffice/navigation/navigation';
 
 export const metadata = {
     title: 'Gowala Farms - BACKOFFICE',
@@ -6,7 +7,10 @@ export const metadata = {
 }
   
 export default function backofficeLayout({ children }) {
-    return <div className={styles.layout}>
-        {children}
-    </div>
+	return (
+		<div className={styles.layout}>
+			<Navigation></Navigation>
+			{children}
+		</div>
+	);
 }

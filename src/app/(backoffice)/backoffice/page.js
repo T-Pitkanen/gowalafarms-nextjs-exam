@@ -1,11 +1,9 @@
+import styles from './page.module.css';
 
-
-export default function Page() {
+export default function BackofficePage() {
 
     return (
-        <div>
-            <h1>GOWALA FARMS BACKOFFICE</h1>
-        </div>
+        <div className={styles.page}>Gowala Farms Backoffice</div>
     )
     
 }

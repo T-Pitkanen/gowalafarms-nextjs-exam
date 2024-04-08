@@ -1,6 +1,7 @@
 
 import './globals.css'
 import { robotoFont, frankRuhlLibreFont } from '@/utils/fonts';
+import { BasketContextProvider } from '@/context/basket';
 
 
 export const metadata = {
@@ -12,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${robotoFont.variable} ${frankRuhlLibreFont.className}`}>
-        {children}
+      <BasketContextProvider>{children}</BasketContextProvider>
       </body>
     </html>
   )

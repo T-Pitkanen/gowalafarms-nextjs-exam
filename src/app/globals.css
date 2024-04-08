@@ -1,5 +1,7 @@
 :root {
   /* Global Variables */
+  --color-green: #5D9913;
+  --color-grey: #181818;
 
 }
 
@@ -8,10 +10,18 @@
   box-sizing: border-box;
 }
 
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
 html,
 body {
 
-  background-color: red;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
 
 }
 
@@ -20,7 +30,7 @@ body {
   html,
   body {
 
-    background-color: green;
+   
   }
   
 }
@@ -29,7 +39,7 @@ body {
   html,
   body {
 
-    background-color: blue;
+   
   
   }
   

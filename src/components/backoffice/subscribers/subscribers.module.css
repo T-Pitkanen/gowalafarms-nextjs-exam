@@ -1,0 +1,81 @@
+.container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.subscribersTable {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  margin-bottom: 10vh;
+}
+
+.subscribersTable th,
+.subscribersTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.subscribersTable th {
+  background-color: #f2f2f2;
+  color: black;
+}
+
+.container h3{
+    font-size: 2em;
+    margin-bottom: 2vh;
+}
+
+
+
+.subscribersTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.subscribersTable tr:hover {
+  background-color: #ddd;
+}
+
+.subscribersTable button {
+  background-color: var(--red-color);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+.subForm{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.subForm label{
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+}
+
+.subForm input {
+    padding: 1em;
+}
+
+.subForm button {
+    background-color: white;
+    border: none;
+    padding: 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
