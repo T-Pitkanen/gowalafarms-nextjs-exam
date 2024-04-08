@@ -7,7 +7,7 @@ export default function PartnersPage() {
     return (
         <div className={styles.page}>
 
-            <h1>Edit Affiliates</h1>
+            <h1>Edit Sponsors</h1>
 
             <Sponsors />
         </div>

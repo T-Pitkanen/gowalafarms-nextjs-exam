@@ -29,7 +29,7 @@ const Employees = () => {
 		const formData = new FormData();
 		formData.append('name', name.value);
 		formData.append('position', text.value);
-		formData.append('description', text.value);
+		formData.append('description', description.value);
 		formData.append('file', file.files[0]);
 
 		let response = await fetch('http://localhost:3000/api/employee', {

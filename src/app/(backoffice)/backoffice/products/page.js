@@ -1,14 +1,15 @@
 import styles from './page.module.css';
-import Reviews from '@/components/backoffice/faq/faq';
+import Products from '@/components/backoffice/products/products';
+
 
 export default function ProductsPage() {
 
     return (
         <div className={styles.page}>
 
-            <h1>Edit Reviews</h1>
+            <h1>Edit Products</h1>
             
-            <Reviews />
+            <Products />
 
 
         </div>
