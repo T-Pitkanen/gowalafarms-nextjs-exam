@@ -1,8 +1,9 @@
 
 
 .footer {
-    background-color: var(--color-green);
-    height: 243px;
+    background-image: url('/footer/footer_bg.jpg');
+    background-position: bottom;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;

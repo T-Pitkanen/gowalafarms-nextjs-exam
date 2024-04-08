@@ -10,8 +10,8 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
-	padding: 0 3em;
-	height: 60px;
+	padding: 0.5em 3em;
+	height: auto;
 	background-color: #fff;
 	color: #000;
 	position: relative;
