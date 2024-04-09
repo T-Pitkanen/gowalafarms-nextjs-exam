@@ -1,7 +1,7 @@
 .navigation {
 	z-index: 100;
 	position: relative;
-	position: fixed;
+	/* position: fixed; */
 	width: 100%;
 }
 

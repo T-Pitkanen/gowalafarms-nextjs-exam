@@ -1,0 +1,55 @@
+.products {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 10vh 0;
+}
+
+.explore {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    margin-bottom: 10vh;
+}
+
+.explore h2 {
+    font-size: 2.5em;
+    color: var(--darkred-color);
+}
+
+.explore p {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--grey-color);
+    letter-spacing: 1px;
+    line-height: 1.7;
+    width: 70%;
+}
+
+
+.list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5em;
+    width: 80%;
+}
+
+@media only screen and (min-width: 1024px) {
+    .list {
+
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+
+    .explore {
+        width: 70%;
+    }
+}
