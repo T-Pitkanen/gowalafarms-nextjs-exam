@@ -11,7 +11,7 @@
   }
   
   .heroText {
-    width: 100%;
+    width: 90%;
     position: absolute;
     z-index: 2;
     font-size: 1.25em;
@@ -20,4 +20,5 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    line-height: 1.5;
   }

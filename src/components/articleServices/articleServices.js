@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import styles from "./articleServices.module.css";
+import { IoMdCheckboxOutline } from "react-icons/io";
 
 const ArticleServices = () => {
   const [services, setServices] = useState([]);
@@ -13,24 +15,32 @@ const ArticleServices = () => {
   }, []);
 
   return (
-    <div>
+    <div className={styles.container}>
       {" "}
-      
-      {services.map((service) => (
-        <div key={service._id}>
+      {services.map((service, index) => (
+          <div 
+          className={`${styles.servicesWrapper} ${index % 2 !== 0 ? styles.servicesWrapperReverse : ''}`} 
+          key={service._id}
+        >
           <Image
             src={service.imagePath}
             alt={service.title}
             width={500}
             height={500}
           />
-          <h2>{service.title}</h2>
-          <p>{service.body}</p>
-          <ul>
-            {service.checklist.map((item, index) => (
-              <li key={index}>{item.title}</li>
-            ))}
-          </ul>
+          <div className={styles.servicesText}>
+            {" "}
+            <h1>{service.title}</h1>
+            <p>{service.body}</p>
+            <ul className={styles.servicesList}>
+              {service.checklist.map((item, index) => (
+                <li key={index}>
+                  <IoMdCheckboxOutline className={styles.icon} />
+                  {item.title}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       ))}
     </div>

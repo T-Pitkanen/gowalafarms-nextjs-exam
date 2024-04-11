@@ -1,63 +1,69 @@
 .container {
+  width: 90%;
+  margin: 10vh auto;
+  background-color: white;
+}
 
-    width: 90%;
-    margin: 5vh auto;
-    background-color: white;
-  }
-  
-  .container h1 {
+.container h1 {
+  font-size: 2.5em;
 
-   padding-bottom: 5vh;
+  color: var(--color-green);
+}
 
-   color: var(--color-green);
-  }
-  
-  .products  {
+.checkoutHeader{
+  width:90%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5em;
+  margin-bottom: 10vh
+}
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1em;
+.checkoutHeader span{
+  font-size: 2.5em;
+  font-weight: 600;
+  padding-bottom: 2vh;
+}
 
-    margin-bottom: 10px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
+.products {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5em;
 
-  .products p {
-    font-weight: bold;
+  margin-bottom: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
 
-  }
+.products p {
+  font-weight: bold;
+  color: var(--color-green);
+}
 
+.container img {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
 
-  .container img {
+  object-fit: cover;
+}
 
-    width: 100px;
-    height: 100px;
-    margin-right: 20px;
+.container h2 {
+  font-size: 1em;
+}
 
-    object-fit: cover;
-  }
-  
-  .container h2 {
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
 
-    font-size: 1em;
-  }
-
-  .buttonContainer{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-   
-  }
-  
-.container button{
-
+.container button {
   display: inline-block;
 
-  width: auto;
+  width: 100%;
   margin: 4px 2px;
   padding: 0.5em 1em;
   border: none;
@@ -73,21 +79,35 @@
   letter-spacing: 1px;
 }
 
-.checkoutSection{
+.checkoutSection {
+  width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1em;
 }
 
-.checkoutTotal{
+.checkoutSection input, .checkoutSection label {
+  width: 100%;
+  
+}
+
+.checkoutSection input {
+  padding: 0.5em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.checkoutTotal {
   width: auto;
   margin: 4px 2px;
   padding: 0.5em 1em;
   border: 1px solid #ddd;
-  text-align: center;
+  text-align: right;
   font-size: 1.1em;
   border-radius: 5px;
- 
+
   font-weight: bold;
   width: 100%;
 }

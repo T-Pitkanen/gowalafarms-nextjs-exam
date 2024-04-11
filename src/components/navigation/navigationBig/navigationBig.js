@@ -56,11 +56,11 @@ const NavigationMobile = () => {
 
         <div className={styles.naviLinks}>
           {" "}
-          <Link href="#home">Home</Link>
-          <Link href="#about">About Us</Link>
-          <Link href="#selected">Explore Foods</Link>
-          <Link href="#reviews">Reviews</Link>
-          <Link href="#faq">Faq</Link>
+          <Link href="/shop">Shop</Link>
+          <Link href="/services">Services</Link>
+          <Link href="/about">About Us</Link>
+          <Link href="/contact">Contact</Link>
+          <Link href="/faq">FAQs</Link>
         </div>
 
         <div className={styles.actions}>

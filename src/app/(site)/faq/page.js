@@ -1,19 +1,20 @@
 import styles from "./page.module.css";
 import Hero from "@/components/hero/hero";
 import Contact from "@/components/contact/contact";
-import Team from "@/components/team/team";
-import QuickContact from "@/components/quickContact/quickContact";
+import Faqs from "@/components/questions/accordions";
 
 
-export default function ContactPage() {
+
+
+export default function FaqPage() {
   const heroConfig = {
     headline: {
-      text: "Contact Gowala Farms",
+      text: "Questions? ",
       color: "black",
     },
     backgroundImage: "/headers/page_header_01.jpg",
     underline: {
-      text: ` Get in touch with us
+      text: ` We might have the answers you're looking for
 				`,
       color: "#5D9913",
     },
@@ -22,17 +23,17 @@ export default function ContactPage() {
     <div className={styles.page}>
       <Hero config={heroConfig} />
       <Contact />
-      <QuickContact />
-      <div className={styles.contact}>
-        <h1>Our Team</h1>
-        <h2>2000+ People work since 1975</h2>
+     
+      <div className={styles.faq}>
+        <h1>Frequently Asked Questions</h1>
         <p>
           Continually productize compelling quality for packed with Elated
           Themes Setting up to website and it crating pages .
         </p>
       </div>
+      <Faqs/>
 
-      <Team />
+      
     </div>
   );
 }

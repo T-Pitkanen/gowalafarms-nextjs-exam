@@ -5,37 +5,31 @@
 }
 
 .slideContent {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    text-align: center;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  width: 100%;
+  height: 100%;
 }
 
 .slideTitle {
-    position: absolute;
-   padding-top: 5vh;
-   letter-spacing: 1px;
-    z-index: 1;
-    color: var(--color-green);
+  position: absolute;
+  padding-top: 5vh;
+  letter-spacing: 1px;
+  z-index: 1;
+  color: var(--color-green);
 }
 
-
-.slideTitle h1{
-    font-size: 2.75em;
-    margin-bottom: -10px;
-    
+.slideTitle h1 {
+  font-size: 2.75em;
+  margin-bottom: -10px;
 }
-
-
 
 .swiperContainer {
   width: 100%;
 }
-
-
 
 .swiperImage {
   width: 100%;
@@ -44,10 +38,10 @@
 }
 
 .slideButton {
-    position: absolute;
-    top: 65%;
-    
-    z-index: 1;
+  position: absolute;
+  top: 65%;
+
+  z-index: 1;
 }
 
 .slider button {
@@ -56,18 +50,17 @@
   border-radius: 20px;
   margin-bottom: 2vh;
   font-weight: 500;
- 
 }
 
-.slideLink{
-    background-color: var(--color-green);
-    color: white;
-    font-size: 1em;
+.slideLink {
+  background-color: var(--color-green);
+  color: white;
+  font-size: 1em;
 }
 
-.slideLink a{
-    font-weight: 700;
-    letter-spacing: 1px;
+.slideLink a {
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .controlBtn {
@@ -89,7 +82,25 @@
   font-size: 1.5em;
 }
 
+.controlBtn button {
+  background-color: white;
+}
 
-.controlBtn button{
-    background-color: white;
+@media screen and (min-width: 1024px) {
+  .swiperImage {
+    height: 50vh;
+  }
+
+  .slideTitle {
+    
+    padding-top: 10vh;
+
+  }
+
+  .slideTitle h1 {
+    font-size: 4em;
+  }
+  .slideTitle h2 {
+    font-size: 2.5em;
+  }
 }

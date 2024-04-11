@@ -6,7 +6,6 @@ import Services from "@/components/services/services";
 
 export default function AboutPage() {
   const heroConfig = {
-  
     headline: {
       text: "About Gowala Farms",
       color: "black",
@@ -22,6 +21,15 @@ export default function AboutPage() {
     <div className={styles.page}>
       <Hero config={heroConfig} />
       <About />
+
+      <div className={styles.partners}>
+        <h2>Our Proud Partners</h2>
+        <h3>We gladly present</h3>
+        <p>
+          Continually productize compelling quality for packed with Elated
+          Themes Setting up to website and it crating pages .
+        </p>
+      </div>
       <Partners />
       <Services />
     </div>

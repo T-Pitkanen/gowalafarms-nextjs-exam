@@ -1,0 +1,36 @@
+.container{
+    width: 90%;
+    margin: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+}
+
+
+
+.form{
+    
+    width: 90%;
+    gap: 1em;
+    
+}
+
+.form input, .form textarea{
+    
+    border: 1px solid rgb(230, 230, 230);
+    padding: 0.5em;
+}
+
+.form, .form label{
+    display: flex;
+    flex-direction: column; 
+}
+
+.form button{
+    border: none;
+    padding: 1em;
+    background-color: var(--color-green);
+    color: white;
+}

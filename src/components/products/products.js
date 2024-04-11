@@ -64,6 +64,10 @@ const Products = ({ exclusive }) => {
 export default Products;
 */
 
+import { FaList } from "react-icons/fa6";
+import { IoMdGrid } from "react-icons/io";
+
+
 import { useEffect, useState } from "react";
 import styles from "./products.module.css";
 import Product from "./product/product";
@@ -113,12 +117,15 @@ const Products = ({ exclusive }) => {
 
   return (
     <div className={styles.products} id="selected">
-      <button onClick={() => setView("card")}>
-        <div>ICON CARD</div>
-      </button>
-      <button onClick={() => setView("list")}>
-        <div>ICON LIST</div>
-      </button>
+      <div className={styles.productBtns}>
+        {" "}
+        <button onClick={() => setView("card")}>
+          <IoMdGrid style={{ color: view === "card" ? "green" : "black" }} />
+        </button>
+        <button onClick={() => setView("list")}>
+          <FaList style={{ color: view === "list" ? "green" : "black" }} />
+        </button>
+      </div>
 
       <div className={styles.list}>
         {isExclusive ? showExclusiveProducts() : showAllProducts()}
@@ -128,4 +135,3 @@ const Products = ({ exclusive }) => {
 };
 
 export default Products;
-

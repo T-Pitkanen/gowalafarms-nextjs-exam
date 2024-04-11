@@ -58,18 +58,16 @@ const Checkout = () => {
 
   return (
     <div className={styles.container}>
-      <h1>Checkout</h1>
-      <span>Please fill out the formular below.</span>
-      <p>
-        Continually productize compelling quality for packed with Elated Themes
-        Setting up to website and it crating pages .
-      </p>
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
+      <div className={styles.checkoutHeader}>
+        {" "}
+        <h1>Checkout</h1>
+        <span>Please fill out the formular below.</span>
+        <p>
+          Continually productize compelling quality for packed with Elated
+          Themes Setting up to website and it crating pages .
+        </p>
+      </div>
+
       {productsFromBasket.map((p) => {
         return (
           <div className={styles.products} key={p.id}>
@@ -80,8 +78,8 @@ const Checkout = () => {
           </div>
         );
       })}
+
       <div className={styles.checkoutSection}>
-        {" "}
         <div className={styles.checkoutTotal}>
           {" "}
           <p>
@@ -91,6 +89,16 @@ const Checkout = () => {
               .toFixed(2)}
           </p>
         </div>
+        <label>
+         Enter Email
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </label>
+
         <div className={styles.buttonContainer}>
           <button type="button" onClick={handleCheckout}>
             Checkout

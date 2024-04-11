@@ -1,7 +1,7 @@
 .navigation {
     width: 100%;
   z-index: 100;
-  position: fixed;
+  /* position: fixed; */
 }
 
 .navigation .navigationBar {
@@ -58,7 +58,7 @@
 .navigation .menu {
   position: absolute;
   transition: top 0.5s ease-in-out;
-  width: 100%;
+  width: 80%;
   top: -100vh;
   background-color: rgb(255, 255, 253);
   color: #000;

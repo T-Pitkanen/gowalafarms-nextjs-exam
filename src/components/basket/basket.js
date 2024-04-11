@@ -92,7 +92,7 @@ const Basket = () => {
 				return (
 					<div key={basketItem._id} className={styles.item}>
 						<Image
-							src={basketItem.image}
+							src={basketItem.imagePath}
 							alt={basketItem.title}
 							width={50}
 							height={50}

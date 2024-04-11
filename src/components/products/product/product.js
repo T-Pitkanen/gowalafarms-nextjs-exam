@@ -87,11 +87,7 @@ const Product = ({ product, view }) => {
           <div className={styles.actions}>
             <div className={styles.prices}>
               <p className={styles.price}>${price.toFixed(2)}</p>
-              {priceBefore > 0 && (
-                <p>
-                  <s> ${priceBefore.toFixed(2)}</s>
-                </p>
-              )}
+            
             </div>
             <button
               className={styles.orderBtn}
@@ -100,7 +96,7 @@ const Product = ({ product, view }) => {
                 addToBasket(_id);
               }}
             >
-              Buy
+              Add to basket
             </button>
           </div>
         </div>

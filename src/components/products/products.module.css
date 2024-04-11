@@ -8,6 +8,28 @@
     margin: 10vh 0;
 }
 
+.productBtns{
+    margin-bottom: 5vh;
+    width: 80%;
+    background-color: #EFF4F8;
+    border-radius: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   padding: 0.5em;
+   padding-right: 5vw;
+   gap: 1em;
+   
+}
+
+.productBtns button{
+    border: none;
+    font-size: 1.25em;
+    color: black;
+}
+
+
+
 .explore {
     display: flex;
     flex-direction: column;
@@ -38,8 +60,11 @@
     align-items: center;
     flex-direction: column;
     gap: 5em;
-    width: 80%;
+    width: 70%;
+    
 }
+
+
 
 @media only screen and (min-width: 1024px) {
     .list {

@@ -74,6 +74,7 @@ const NavigationMobile = () => {
           <Link href="/services">Services</Link>
           <Link href="/about">About Us</Link>
           <Link href="/contact">Contact</Link>
+          <Link href="/faq">FAQs</Link>
          
         </div>
 

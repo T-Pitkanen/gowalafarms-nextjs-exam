@@ -77,9 +77,6 @@ const Partners = () => {
 
   return (
     <div className={`${styles.container} `}>
-      <div className={`${styles.header}`}>
-        <h3>Our Partners</h3>
-      </div>
 
       <div className={`${styles.slider}`}>
         <swiper-container
@@ -89,7 +86,7 @@ const Partners = () => {
           slides-per-group={1}
           ref={swiperRef}
         >
-          {partners.map((partner, index) => {
+          {partners.map((partner) => {
             return (
               <swiper-slide key={partner._id}>
                 <div className={styles.partner}>
