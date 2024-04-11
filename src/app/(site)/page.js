@@ -5,6 +5,10 @@ import Products from "@/components/products/products";
 import Team from "@/components/team/team";
 import Subscribe from "@/components/subscribe/subscribe";
 import Partners from "@/components/partners/partners";
+import Exclusive from "@/components/exclusiveProducts/exclusive";
+import ProductsSwiper from "@/components/productsSwiper/productsSwiper";
+import ShopButton from "@/components/allProducts/allProducts";
+
 
 export default function Page() {
   return (
@@ -21,7 +25,15 @@ export default function Page() {
             Themes Setting up to website and it crating pages .
           </p>
         </div>
-        <Products exclusive={true} />
+
+        <Products exclusive={true}/>
+        <ShopButton />
+         {/* <div className={styles.productsCard}>
+          {" "}
+          <Exclusive exclusive={true} />
+          <ProductsSwiper />
+        </div>  */}
+
         <div className={styles.teams}>
           <h1>Our Team</h1>
           <h2>2000+ People work since 1975</h2>

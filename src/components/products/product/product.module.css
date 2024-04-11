@@ -1,6 +1,6 @@
 .productContainer{
     
-    width: 80vw;
+    width: 70vw;
     padding: 1em;
     background-color: #EFF4F8;
     border: 3px solid white;
@@ -78,6 +78,17 @@
     font-weight: 600;
 }
 
+.discountBanner {
+    position: absolute;
+    margin-top: 2vh;
+    left: 60vw; 
+    border-radius: 10px;
+    padding: 0.75em;
+    background-color: var(--color-green);
+    color: white;
+    font-weight: bold;
+  }
+
 @media only screen and (min-width: 1024px) {
 
 
@@ -87,7 +98,7 @@
 
 .productContainer{
     height: auto;
-    width: 250px;
+    width: 300px;
     padding: 1em 2em;
 }
 
@@ -120,6 +131,17 @@
     align-items: flex-start;
     text-align: left;
     gap: 0em;
+  }
+
+  .discountBanner {
+    position: absolute;
+    margin-top: 0vh;
+    left: 18vw; 
+    border-radius: 10px;
+    padding: 0.5em;
+    background-color: var(--color-green);
+    color: white;
+    font-weight: bold;
   }
 
 }

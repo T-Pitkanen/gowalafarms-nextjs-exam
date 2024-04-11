@@ -1,35 +1,4 @@
 'use client'
-/*import { useEffect, useState } from 'react';
-import styles from './team.module.css';
-
-import Image from "next/image";
-
-const Team = () => {
-    const [employees, setEmployees] = useState([]);
-
-    useEffect(() => {
-        fetch('http://localhost:3000/api/employees')
-            .then(response => response.json())
-            .then(data => setEmployees(data));
-    }, []);
-
-    return (
-        <div className={styles.container}>
-          {employees.map(employee => (
-            <div key={employee._id} className={styles.card}>
-              <Image src={employee.imagePath} alt={employee.name} width={300} height={300} />
-              <div className={styles.overlay}>
-                <h2>{employee.name}</h2>
-                <h3>{employee.position}</h3>
-                <p>{employee.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      );
-    };
-
-export default Team; */
 
 import { useEffect, useState } from 'react';
 import styles from './team.module.css';
@@ -69,7 +38,7 @@ const Team = () => {
     <div className={styles.container}>
       {employees.map(employee => (
         <div key={employee._id} className={styles.card}>
-          <Image src={employee.imagePath} alt={employee.name} width={300} height={300} />
+          <Image src={employee.imagePath} alt={employee.name} width={500} height={500} />
           <div className={styles.overlay}>
             <h2>{employee.name}</h2>
             <h3>{employee.position}</h3>

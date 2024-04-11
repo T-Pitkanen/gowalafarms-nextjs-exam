@@ -57,23 +57,23 @@ const Products = () => {
 	return (
 		<div className={styles.container}>
 			<h2>Products</h2>
-			<div className={styles.reviews}>
+			<div className={styles.products}>
 				{products.map((product, index) => {
 					return (
-						<span className={styles.reviewsContainer} key={index}>
+						<span className={styles.productsContainer} key={index}>
 							<Image
-								className={styles.reviewImg}
+								className={styles.productImg}
 								src={product.imagePath}
 								alt={product.title}
-								width={100}
-								height={100}
+								width={500}
+								height={500}
 							/>
-							<p>{product.title}</p>
+							<p><b>{product.title}</b></p>
 							<p>{product.description}</p>
-							<p>{product.discountInPercent}</p>
+							<p><b>Discount: {product.discountInPercent}%</b></p>
 							<p>{product.exclusive}</p>
-							<p>{product.price}</p>
-							<button onClick={(e) => handleDelete(e, review._id)}>
+							<p><b>Price: ${product.price}</b> </p>
+							<button onClick={(e) => handleDelete(e, product._id)}>
 								Delete
 							</button>
 						</span>
@@ -83,7 +83,7 @@ const Products = () => {
 
 			<h3>Add New Product</h3>
 
-			<form onSubmit={handleSubmit}>
+			<form className={styles.form} onSubmit={handleSubmit}>
 				<label>
 					{' '}
 					Title

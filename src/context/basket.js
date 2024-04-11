@@ -22,35 +22,42 @@ export const BasketContextProvider = ({ children }) => {
 	//addToBasket, changeProductAmount, and removeFromBasket
 	//manipulate the basket state and synchronize it with localStorage.
 
-	const addToBasket = (id, amount = 1) => {
-		//retrieve the basket items from local storage
-		let basket = localStorage.getItem('basket');
-	  
-		if (basket) {
-		  basket = JSON.parse(basket);
-		  const existingProductIndex = basket.findIndex((item) => item.id === id);
-	  
-		  if (existingProductIndex >= 0) {
-			// Set the amount of the product in the basket to the amount argument
-			basket[existingProductIndex].amount = amount;
-		  } else {
-			basket.push({
-			  id: id,
-			  amount: amount,
-			});
-		  }
-		} else {
-		  basket = [
-			{
-			  id: id,
-			  amount: amount,
-			},
-		  ];
-		}
 
-		localStorage.setItem('basket', JSON.stringify(basket));
-		setBasket(basket);
-	};
+const addToBasket = (id, amount = 1) => {
+	//retrieve the basket items from local storage
+	let basket = localStorage.getItem('basket');
+	
+	if (basket) {
+	  basket = JSON.parse(basket);
+	  const existingProductIndex = basket.findIndex((item) => item.id === id);
+	
+	  if (existingProductIndex >= 0) {
+		// add the amount argument to the existing amount of the product in the basket
+		basket[existingProductIndex].amount += amount;
+  
+		// amount wont go below 1
+		if (basket[existingProductIndex].amount < 1) {
+		  basket[existingProductIndex].amount = 1;
+		}
+	  } else {
+		basket.push({
+		  id: id,
+		  amount: amount,
+		});
+	  }
+	} else {
+	  basket = [
+		{
+		  id: id,
+		  amount: amount,
+		},
+	  ];
+	}
+  
+	localStorage.setItem('basket', JSON.stringify(basket));
+	setBasket(basket);
+  };
+
 
 	const getProductsForBasket = async () => {
 
@@ -59,15 +66,18 @@ export const BasketContextProvider = ({ children }) => {
 
         if(basket && basket.length > 0) {
       
-            let producIds = basket.map( (item) => item.id);
-            let result = await fetch('/api/products?range=' + producIds.toString());
+            let productIds = basket.map( (item) => item.id);
+            let result = await fetch('/api/products?range=' + productIds.toString());
             let data = await result.json();
+			console.log(data);
 
             data = data.map( (product) => {
                 let basketItem = basket.find( (item) => item.id === product._id);
                 product.amount = basketItem.amount;
                 return product;
             })
+
+			console.log(data);
 
             return data;
         }

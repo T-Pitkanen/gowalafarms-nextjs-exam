@@ -58,7 +58,6 @@ const Slide = ({ image }) => {
 const Carousel = () => {
   const swiperRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [showControls, setShowControls] = useState(false);
   const [images, setImages] = useState([
     {
       _id: 1,
@@ -101,6 +100,7 @@ const Carousel = () => {
       },
     },
   ]);
+
 
   // Register swiper
   useEffect(() => {

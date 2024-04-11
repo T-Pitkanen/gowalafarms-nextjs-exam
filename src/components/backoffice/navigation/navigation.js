@@ -10,6 +10,7 @@ const Navigation = () => {
 			<Link href="/backoffice/orders">Edit Orders</Link> |
 			<Link href="/backoffice/employees">Edit Employees</Link> |
 			<Link href="/backoffice/products">Edit Products</Link> |
+			<Link href="/backoffice/contact">Edit Contacts</Link> |
 			{/* <Link href="/backoffice/single">Single</Link>| */}
 			{/* <Link href="/backoffice/mulitple">Mulitple</Link> */}
 		</div>

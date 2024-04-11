@@ -1,7 +1,7 @@
 "use client";
 import styles from "./accordions.module.css";
 import { useState } from "react";
-import { FaAngleDown, FaAngleUp, FaHamburger } from "react-icons/fa";
+import { FaAngleDown, FaAngleUp  } from "react-icons/fa";
 
 const Accordion = ({ header, body }) => {
   const [isActive, setIsActive] = useState(false);
@@ -10,7 +10,7 @@ const Accordion = ({ header, body }) => {
     <div className={`${styles.accordion} ${isActive ? styles.active : ""}`}>
       <div className={styles.body}>
         <h2 onClick={() => setIsActive(!isActive)}>
-          {/* <FaHamburger className={styles.iconBrg} /> */}
+      
           {header}
           {isActive ? (
             <FaAngleUp className={styles.icon} />

@@ -18,7 +18,7 @@
 }
 
 .order {
-  background-color: white;
+
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -67,16 +67,16 @@
   flex-direction: column;
  margin-left: 5vw;
   gap: 10px;
-  background-color: white;
+ 
   padding: 2em;
  
 }
 
 .form {
+  border: 1px solid grey;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background-color: white;
   padding: 2em;
   
 }
@@ -84,7 +84,7 @@
 .input {
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #3f3f3f;
 }
 
 .box {
@@ -95,8 +95,8 @@
 .button {
   padding: 10px 20px;
   border-radius: 5px;
-  border: none;
+  border: 1px solid rgb(99, 99, 99);
   background-color: var(--red-color);
-  color: white;
+  color: rgb(0, 0, 0);
   cursor: pointer;
 }

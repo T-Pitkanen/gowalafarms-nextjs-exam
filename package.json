@@ -26,5 +26,10 @@
     "react-spinners": "^0.13.8",
     "swiper": "^11.0.7",
     "yup": "^1.4.0"
-  }
+  },
+  "description": "```\r Author      : Media College Viborg.\r Date        : 2024\r Description : Project Bootstrapping.\r ```",
+  "main": "index.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
 }

@@ -18,6 +18,7 @@
 
 .naviLinks {
   width: 70%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,17 +29,19 @@
   display: block;
   width: 100%;
   font-weight: 700;
-  text-align: left;
-  /* padding: 20px; */
+  text-align: center;
+  /* padding: 10px; */
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--red-color);
+  border-radius: 20px;
+  
 }
 
 .naviLinks a:hover{
     transition: all 0.3s ease-in-out;
     background-color: var(--color-green);
-    color: #000;
+    color: #ffffff;
+    font-weight: 400;
 }
 
 .navigation .navigationBar .actions {

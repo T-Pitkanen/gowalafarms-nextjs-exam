@@ -55,21 +55,21 @@ const Employees = () => {
 	return (
 		<div className={styles.container}>
 			<h2>Employees</h2>
-			<div className={styles.reviews}>
+			<div className={styles.employees}>
 				{employees.map((employee, index) => {
 					return (
-						<span className={styles.reviewsContainer} key={index}>
+						<span className={styles.employeesContainer} key={index}>
 							<Image
-								className={styles.reviewImg}
+								className={styles.employeesImg}
 								src={employee.imagePath}
 								alt={employee.title}
-								width={100}
-								height={100}
+								width={500}
+								height={500}
 							/>
-							<p>{employee.name}</p>
+							<p><b>{employee.name}</b></p>
 							<p>{employee.description}</p>
-							<p>{employee.position}</p>
-							<button onClick={(e) => handleDelete(e, review._id)}>
+							<p><b>{employee.position}</b></p>
+							<button onClick={(e) => handleDelete(e, employee._id)}>
 								Delete
 							</button>
 						</span>
@@ -79,14 +79,14 @@ const Employees = () => {
 
 			<h3>Add New Employee</h3>
 
-			<form onSubmit={handleSubmit}>
+			<form className={styles.form} onSubmit={handleSubmit}>
 				<label>
 					{' '}
 					Name
 					<input
 						type="name"
 						name="name"
-						placeholder="Reviewers Name"
+						placeholder="Employees Name"
 						defaultValue={''}
 					/>
 				</label>

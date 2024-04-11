@@ -1,0 +1,11 @@
+.container{
+    padding:  2em;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2vh;
+    border-bottom: 1px solid black;
+}

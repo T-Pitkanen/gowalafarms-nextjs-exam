@@ -2,9 +2,7 @@
 
 import Accordion from "./accordion";
 import { useEffect, useState } from "react";
-// import { API_BASE_URL } from '@/config/apiConfig';
 import styles from "./accordions.module.css";
-import ContentLoader from "react-content-loader";
 
 const Faqs = () => {
   const [questionsData, setQuestionsData] = useState([]);

@@ -1,4 +1,4 @@
-import Link from "next/link";
+
 import styles from "./quickContact.module.css";
 import { FaPhoneAlt, FaClock } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";

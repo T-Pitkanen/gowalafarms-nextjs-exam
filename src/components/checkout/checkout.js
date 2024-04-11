@@ -75,6 +75,12 @@ const Checkout = () => {
 
             <h2>{p.title}</h2>
             <p>${p.price.toFixed(2)}</p>
+
+            <div className={styles.addSubBtn}>
+              <button onClick={() => addToBasket(p._id, -1)}>-</button>
+              <span className={styles.amount}>{p.amount}</span>
+              <button onClick={() => addToBasket(p._id, 1)}>+</button>
+            </div>
           </div>
         );
       })}
@@ -90,7 +96,7 @@ const Checkout = () => {
           </p>
         </div>
         <label>
-         Enter Email
+          Enter Email
           <input
             type="email"
             placeholder="Email"

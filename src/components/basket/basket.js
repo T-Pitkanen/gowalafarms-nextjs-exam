@@ -49,36 +49,6 @@ const Basket = () => {
 		}
 	};
 
-	const handleCheckout = async () => {
-		try {
-			const orderItems = basketItems.map((item) => ({
-				id: item._id, // Changed from item._id to item.id
-				amount: item.amount,
-			}));
-
-			console.log({ products: orderItems });
-
-			const response = await fetch('/api/order', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify({
-					products: orderItems,
-					created: new Date().toISOString(),
-				}),
-			});
-
-			if (!response.ok) {
-				throw new Error(`HTTP error! status: ${response.status}`);
-			}
-
-			const data = await response.json();
-			console.log(data);
-		} catch (error) {
-			console.error('Error in handleCheckout:', error);
-		}
-	};
 
 	//takes an ID, removes the item with that ID from the basket. Also updates the basketItems state.
 	const handleRemove = (id) => {
@@ -132,7 +102,7 @@ const Basket = () => {
 					.toFixed(2)}
 			</div>
 			<div className={styles.checkout}>
-				{/* <button onClick={handleCheckout}>Checkout</button> */}
+				
 				<button>
 					<Link href="/checkout">Checkout</Link>
 				</button>

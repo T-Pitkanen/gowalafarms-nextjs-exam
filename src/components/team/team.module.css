@@ -9,8 +9,9 @@
 }
 
 .card img{
-    object-fit: cover;
-    /* height: auto; */
+    object-fit: fill;
+    height: auto;
+    width: 100%;
 }
 
 .card {
@@ -63,4 +64,10 @@
     width: auto;
    
   }
+
+  .card img{
+    object-fit: fill;
+    height: auto;
+    width: 275px;
+}
 }
