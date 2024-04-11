@@ -11,7 +11,7 @@
 }
 
 .checkoutHeader{
-  width:90%;
+  width:100%;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -110,4 +110,19 @@
 
   font-weight: bold;
   width: 100%;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+  .container{
+    margin: 0;
+    padding: 10vh 0;
+  }
+
+  .checkoutSection input {
+    padding: 1em 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
 }

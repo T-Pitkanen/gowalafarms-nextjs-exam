@@ -19,12 +19,16 @@ export default function ShopPage() {
   return (
     <div className={styles.page}>
       <Hero config={heroConfig} />
-      <h1>All our products</h1>
-      <h2>Everything in one place</h2>
-      <p>
-        Continually productize compelling quality for packed with Elated Themes
-        Setting up to website and it crating pages .
-      </p>
+      <div className={styles.products}>
+        {" "}
+        <h1>All our products</h1>
+        <h2>Everything in one place</h2>
+        <p>
+          Continually productize compelling quality for packed with Elated
+          Themes Setting up to website and it crating pages .
+        </p>
+      </div>
+
       <Products />
     </div>
   );

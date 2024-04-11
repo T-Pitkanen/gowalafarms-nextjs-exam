@@ -4,7 +4,6 @@ import Contact from "@/components/contact/contact";
 import Team from "@/components/team/team";
 import QuickContact from "@/components/quickContact/quickContact";
 
-
 export default function ContactPage() {
   const heroConfig = {
     headline: {
@@ -21,8 +20,12 @@ export default function ContactPage() {
   return (
     <div className={styles.page}>
       <Hero config={heroConfig} />
-      <Contact />
-      <QuickContact />
+      <div className={styles.contacts}>
+        {" "}
+        <Contact />
+        <QuickContact />
+      </div>
+
       <div className={styles.contact}>
         <h1>Our Team</h1>
         <h2>2000+ People work since 1975</h2>

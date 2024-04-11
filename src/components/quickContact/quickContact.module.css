@@ -36,3 +36,11 @@
     font-size: 1.5em;
     margin: 0 10px;
 }
+
+@media screen and (min-width: 1024px) {
+   .container{
+    border: 1px solid #EFF4F8;
+    width: 500px;
+    padding: 2em;
+   }
+  }

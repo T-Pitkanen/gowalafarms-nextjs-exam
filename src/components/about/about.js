@@ -18,20 +18,25 @@ const About = () => {
     <div className={styles.container}>
       {articles.map((article) => (
         <div className={styles.aboutWrapper} key={article._id}>
-          
           <Image
             src={article.imagePath}
             alt={article.title}
             width={500}
             height={300}
           />
-          <h1>{article.title}</h1>
-          <p>{article.body}</p>
-          <ul className={styles.aboutList}>
-            {article.checklist.map((item, index) => (
-              <li key={index}><IoMdCheckboxOutline className={styles.icon}/>{item.title}</li>
-            ))}
-          </ul>
+          <div className={styles.aboutText}>
+            {" "}
+            <h1>{article.title}</h1>
+            <p>{article.body}</p>
+            <ul className={styles.aboutList}>
+              {article.checklist.map((item, index) => (
+                <li key={index}>
+                  <IoMdCheckboxOutline className={styles.icon} />
+                  {item.title}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       ))}
     </div>

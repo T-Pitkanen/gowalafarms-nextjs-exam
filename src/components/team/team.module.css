@@ -48,11 +48,14 @@
 
 @media screen and (min-width: 1024px) {
   .container {
+    width: 80%;
     margin: 0;
+    margin-bottom: 10vh;
     padding: 10vh 0;
    flex-direction: row;
    flex-wrap: wrap;
    background-image: url('/blobs/blob_02.jpg');
+   background-size: cover;
   }
 
   .card {

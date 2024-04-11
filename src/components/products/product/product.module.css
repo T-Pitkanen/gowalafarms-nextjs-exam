@@ -3,7 +3,7 @@
     width: 80vw;
     padding: 1em;
     background-color: #EFF4F8;
-    border: 2px solid white;
+    border: 3px solid white;
     box-shadow: 0 6px 6px #EBEBEB;
 }
 
@@ -80,13 +80,46 @@
 
 @media only screen and (min-width: 1024px) {
 
-    .product {
-        width: 350px;
-    }
 
-    .productImg {
-        width: 350px;
-    }
+.productImg{
+    height: 150px;
+}
 
+.productContainer{
+    height: auto;
+    width: 250px;
+    padding: 1em 2em;
+}
+
+.detailContainer{
+    gap: 1em;
+}
+ 
+.product {
+    gap: 2em;
+
+
+}
+
+.productContainerList {
+    width: 100%;
+   
+  }
+
+  .productList{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .productList img{
+    width: 150px;
+  }
+
+  .productList .detailContainer{
+    align-items: flex-start;
+    text-align: left;
+    gap: 0em;
+  }
 
 }

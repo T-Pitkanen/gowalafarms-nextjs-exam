@@ -70,8 +70,8 @@ const Checkout = () => {
 
       {productsFromBasket.map((p) => {
         return (
-          <div className={styles.products} key={p.id}>
-            <Image src={p.imagePath} alt={p.name} width={300} height={300} />
+          <div className={styles.products} key={p._id}>
+            <Image src={p.imagePath} alt={p.title} width={300} height={300} />
 
             <h2>{p.title}</h2>
             <p>${p.price.toFixed(2)}</p>

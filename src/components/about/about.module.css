@@ -13,8 +13,13 @@
     gap: 2em;
 }
 
+.aboutText{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
 
-.aboutWrapper h1{
+.aboutText h1{
     text-align: center;
     font-weight: 400;
 }
@@ -33,4 +38,26 @@
 .icon{
     margin-right: 2vw;
     color: var(--color-green);
+}
+
+@media screen and (min-width: 1024px){
+    .aboutWrapper{
+        width: 80%;
+        flex-direction: row-reverse;
+        gap: 5em;
+    }
+
+    .aboutText h1 {
+        text-align: left;
+    }
+
+    .aboutText{
+        width: 50%;
+    }
+
+
+    .aboutWrapper img{
+        width: 40%;
+        height: auto;
+    }
 }

@@ -22,7 +22,7 @@ export default function FaqPage() {
   return (
     <div className={styles.page}>
       <Hero config={heroConfig} />
-      <Contact />
+      <Contact/>
      
       <div className={styles.faq}>
         <h1>Frequently Asked Questions</h1>

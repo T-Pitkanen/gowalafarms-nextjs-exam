@@ -16,6 +16,14 @@
   text-align: center;
 }
 
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .contact h1,
 .contact h2 {
   font-size: 2.5em;
@@ -24,4 +32,13 @@
 .contact h2 {
   font-weight: 400;
   margin-bottom: 2vh;
+}
+
+
+@media screen and (min-width: 1024px) {
+  .contacts{
+    width: 80%;
+    flex-direction: row;
+    gap: 5em;
+  }
 }

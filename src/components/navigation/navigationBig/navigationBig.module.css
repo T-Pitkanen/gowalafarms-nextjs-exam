@@ -1,7 +1,7 @@
 .navigation {
     width: 100%;
   z-index: 100;
-  /* position: fixed; */
+  position: fixed;
 }
 
 .navigation .navigationBar {
@@ -17,10 +17,11 @@
 }
 
 .naviLinks {
-  width: 60%;
+  width: 70%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1em;
 }
 
 .naviLinks a {
@@ -28,7 +29,7 @@
   width: 100%;
   font-weight: 700;
   text-align: left;
-  padding: 20px;
+  /* padding: 20px; */
   text-decoration: none;
   text-transform: uppercase;
   color: var(--red-color);
@@ -88,7 +89,7 @@
 }
 
 .logo {
-  width: 60%;
+  width: 100%;
   height: auto;
 }
 
@@ -108,9 +109,16 @@
   font-weight: bold;
 }
 
-@media (min-width: 728px) {
-  .actions {
+@media (min-width: 1024px) {
+
+
+  .navigation .basket {
+ 
+    width: 40%;
+
+    
   }
+
 
   .navigation .navigationBar {
     padding: 0 10rem;

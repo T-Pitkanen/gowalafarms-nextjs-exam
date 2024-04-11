@@ -23,3 +23,16 @@
     font-weight: 400;
     margin-bottom: 2vh;
 }
+
+
+@media screen and (min-width: 1024px) {
+
+  .partners{
+    margin-top: 20vh;
+  }
+
+  .partners p {
+    width: 50%;
+  }
+
+}
