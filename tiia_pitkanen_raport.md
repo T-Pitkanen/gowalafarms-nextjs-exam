@@ -1,6 +1,6 @@
-# Exam Project - Tiia Pitkänen
+# Gowala Farms - Tiia Pitkänen - WebH123-1
 
-
+**Gowala Farms – A family-run farm in Australia**
 
 Gowala Farms' website serves as a functional prototype designed primarily for mobile devices. It includes features such as an API and backoffice for managing partners, employees, subscribers, articles, products, FAQs, orders, services, and contacts.
 
@@ -32,9 +32,10 @@ We were given an Adobe XD file and told to follow the design in it. An assets fo
 
 ## Installation and Usage
 
-- Run npm install to install all the required dependencies.
+- Run "npm install" to install the node modules.
 - Set up environment variables. 
-- Run"npm run dev" and access the website at http://localhost:3000
+- Run "npm run seed"
+- Run "npm run dev" and access the website at http://localhost:3000
 
 
 
