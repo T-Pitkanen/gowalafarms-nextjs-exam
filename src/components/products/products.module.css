@@ -64,7 +64,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
-    width: 70%;
+    width: 80%;
   }
 
   .card {
@@ -77,7 +77,7 @@
 
   .productBtns {
     padding: 0.75em;
-    width: 70%;
+    width: 80%;
   }
 
   .productBtns button {

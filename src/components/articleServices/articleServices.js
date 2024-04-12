@@ -19,6 +19,7 @@ const ArticleServices = () => {
       {" "}
       {services.map((service, index) => (
           <div 
+          // check if the index is odd or even and add a class to reverse the order of the elements
           className={`${styles.servicesWrapper} ${index % 2 !== 0 ? styles.servicesWrapperReverse : ''}`} 
           key={service._id}
         >

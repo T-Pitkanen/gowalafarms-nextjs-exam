@@ -4,11 +4,10 @@
   flex-direction: column;
   gap: 1em;
   z-index: 99999;
-
 }
 
 .item {
-  border-bottom: 1px solid #EBEBEB;
+  border-bottom: 1px solid #ebebeb;
   padding: 0.5rem 0.25rem;
   width: 100%;
   display: flex;
@@ -67,7 +66,6 @@
 }
 
 .checkout button {
-  
   border: none;
   background-color: var(--color-green);
   color: white;
@@ -82,40 +80,27 @@
   letter-spacing: 1px;
 }
 
-
 @media (min-width: 1024px) {
-
   .container {
     padding: 2vh 1vw;
     border-radius: 0 0 20px 20px;
   }
-  
+
   .item {
     padding: 0.5rem 1em;
   }
-  
 
   .item span {
     font-weight: 700;
   }
-  
+
   .title {
     width: 20%;
-
   }
-  
 
-
-  
   .addBtn,
   .decreaseBtn {
-
     border-radius: 20px;
     font-size: 17px;
-  
   }
-  
-
-
-  
 }

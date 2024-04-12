@@ -37,16 +37,13 @@
   margin-top: 5vh;
 }
 
-
 @media screen and (min-width: 1024px) {
-  .page{
+  .page {
     margin-top: 0vh;
-    padding-top: 20vh ;
+    padding-top: 20vh;
   }
 
   .container {
     font-size: 1.5em;
   }
-
-
 }

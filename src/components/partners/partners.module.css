@@ -11,18 +11,19 @@
 }
 
 
-.partner {
+/* .partner {
     margin: auto auto;
 
     border-radius: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 .partnerImg {
-    height: 100%;
-    width: 70%;
+    margin-left: 10vw;
+    height: auto;
+    width: 60%;
     object-fit: cover;
 }
 
@@ -37,8 +38,9 @@
     }
 
     .partnerImg {
-        height: 100%;
-        width: 40%;
+        /* margin-left: 10vw; */
+        height: auto;
+        width: 50%;
         object-fit: cover;
     }
 

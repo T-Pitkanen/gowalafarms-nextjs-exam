@@ -86,15 +86,13 @@
   background-color: white;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
   .swiperImage {
-    height: 50vh;
+    height: 60vh;
   }
 
   .slideTitle {
-    
-    padding-top: 10vh;
-
+    padding-top: 15vh;
   }
 
   .slideTitle h1 {
@@ -102,5 +100,22 @@
   }
   .slideTitle h2 {
     font-size: 2.5em;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .swiperImage {
+    height: 80vh;
+  }
+
+  .slideTitle {
+    padding-top: 20vh;
+  }
+
+  .slideTitle h1 {
+    font-size: 5em;
+  }
+  .slideTitle h2 {
+    font-size: 3em;
   }
 }

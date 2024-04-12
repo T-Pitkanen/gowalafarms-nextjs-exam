@@ -17,7 +17,7 @@ const Subscribe = () => {
     // Simple email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      setErrorMessage("Invalid email address");
+      setErrorMessage("Check your email address!");
       return;
     }
 
@@ -40,6 +40,7 @@ const Subscribe = () => {
 
       setSubmittedEmail(email);
       setEmail("");
+      setErrorMessage("");
     } catch (error) {
       console.error(error);
     }
@@ -55,9 +56,7 @@ const Subscribe = () => {
             Continually productize compelling quality for packed with Elated
             Themes Setting up to website and it crating pages .
           </p>
-          {errorMessage && (
-            <p className={styles.errorMessage}>{errorMessage}</p>
-          )}
+         
         </div>
 
         <form onSubmit={handleSubmit}>
@@ -68,6 +67,9 @@ const Subscribe = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
+           {errorMessage && (
+            <p className={styles.errorMessage}>{errorMessage}</p>
+          )}
           <button className={styles.submit} type="submit">
             Subscribe
           </button>

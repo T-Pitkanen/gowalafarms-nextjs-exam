@@ -1,6 +1,9 @@
 import styles from "./hero.module.css";
 import Image from "next/image";
 
+
+//used to dynamically set the content and styling of a hero section in a webpage
+
 const Hero = ({ config }) => {
   return (
     <div className={styles.hero}>

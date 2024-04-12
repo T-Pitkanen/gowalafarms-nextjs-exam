@@ -13,6 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${robotoFont.variable} ${frankRuhlLibreFont.className}`}>
+        {/* Context provider: Passing data down without having to pass props manually */}
       <BasketContextProvider>{children}</BasketContextProvider>
       </body>
     </html>

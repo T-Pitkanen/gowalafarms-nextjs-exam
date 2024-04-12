@@ -1,97 +1,112 @@
-'use client';
-import { useEffect, useState } from 'react';
-import styles from './sponsors.module.css';
-import Image from 'next/image';
-
-
+"use client";
+import { useEffect, useState } from "react";
+import styles from "./sponsors.module.css";
+import Image from "next/image";
+import Link from "next/link";
 
 const Sponsors = () => {
+  const [sponsors, setSponsors] = useState([]);
 
-    const [sponsors, setSponsors] = useState([]);
+  const getSponsors = async () => {
+    const response = await fetch("http://localhost:3000/api/sponsors");
+    const data = await response.json();
+    setSponsors(data);
+  };
 
-    const getSponsors = async () => {
-            
-            const response = await fetch('http://localhost:3000/api/sponsors');
-            const data = await response.json();
-            setSponsors(data);
-    };
+  useEffect(() => {
+    getSponsors();
+  }, []);
 
-    useEffect(() => {
+  //CREATE
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-        getSponsors();
+    const { name, file, link } = e.target.elements;
 
-    }, []);
-
-
-    const handleSubmit = async (e) => {
-
-        e.preventDefault();
-
-        const {title, file} = e.target.elements;
-       
-        if(!title.value || !file.files[0]) {
-
-            console.log('You need a title and a file!');
-            return;
-
-        }
-        
-        const formData = new FormData();
-        formData.append('title', title.value);
-        formData.append('file', file.files[0]);
-
-        let response = await fetch('http://localhost:3000/api/sponsor', {
-            method: 'POST',
-            body: formData
-        })
-
-        let data = await response.json();
-
-        getSponsors();
+    if (!name.value || !file.files[0]) {
+      console.log("You need a title and a file!");
+      return;
     }
 
-    const handleDelete = async (e, id) => {
+    const formData = new FormData();
+    formData.append("name", name.value);
+    formData.append("link", link.value);
+    formData.append("file", file.files[0]);
 
-        e.preventDefault();
-        let response = await fetch('http://localhost:3000/api/sponsor?id=' + id, {
-            method: 'DELETE'
-        })
-        let data = await response.json();
+    let response = await fetch("http://localhost:3000/api/sponsor", {
+      method: "POST",
+      body: formData,
+    });
 
-        getSponsors();
-    }
+    let data = await response.json();
 
-    return (
-        
-        <div className={styles.container}>
+    getSponsors();
+  };
 
-            <h2>Sponsors</h2>
+  //DELETE
+  const handleDelete = async (e, id) => {
+    e.preventDefault();
+    let response = await fetch("http://localhost:3000/api/sponsor?id=" + id, {
+      method: "DELETE",
+    });
+    let data = await response.json();
 
-            {sponsors.map((sponsor, index) => {
-                    
-                    return (
-                        <span className={styles.sponsorContainer} key={index}>
-                            <Image className={styles.sponsorImg} src={sponsor.imagePath} alt={sponsor.title} width={100} height={100}/>
-                            <button onClick={(e) => handleDelete(e, sponsor._id)}>Delete</button>
-                        </span>
-                    )
-            })}
+    getSponsors();
+  };
 
-            <h3>Add New Sponsor</h3>
+  return (
+    <div className={styles.container}>
+      {sponsors.map((sponsor, index) => {
+        return (
+          <span className={styles.sponsorContainer} key={index}>
+            <p>{sponsor.name}</p>
+            {sponsor.link ? (
+              <Link href={sponsor.link}>
+                <Image
+                  className={styles.sponsorImg}
+                  src={sponsor.imagePath}
+                  alt={sponsor.name}
+                  width={100}
+                  height={100}
+                />
+              </Link>
+            ) : (
+              <Image
+                className={styles.sponsorImg}
+                src={sponsor.imagePath}
+                alt={sponsor.name}
+                width={100}
+                height={100}
+              />
+            )}
+            <button onClick={(e) => handleDelete(e, sponsor._id)}>
+              Delete
+            </button>
+          </span>
+        );
+      })}
 
-            <form onSubmit={handleSubmit}>
-                <label> Sponsor title
-                    <input type="title" name="title" placeholder="Sponsor Title" defaultValue={'New Sponsor'}/>
-                </label>
-                <label> Choose File
-                    <input type="file" name="file" placeholder="Select File"/>
-                </label>
-                <button>Upload</button>
-            </form>   
+      <h3>Add New</h3>
 
-
-
-        </div>
-    )
+      <form onSubmit={handleSubmit}>
+        <label>
+          {" "}
+          Sponsor name
+          <input type="name" name="name" defaultValue={"New Sponsor"} />
+        </label>
+        <label>
+          {" "}
+          Choose File
+          <input type="file" name="file" placeholder="Select File" />
+        </label>
+        <label>
+          {" "}
+          Link
+          <input type="text" name="link" placeholder="Enter URL" />
+        </label>
+        <button>Upload</button>
+      </form>
+    </div>
+  );
 };
 export default Sponsors;

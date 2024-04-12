@@ -25,7 +25,7 @@ const Faqs = () => {
     const { question, answer } = e.target.elements;
 
     if (!question.value || !answer.value) {
-      console.log("You question and an answer!");
+      console.log("You need to add a question and an answer!");
       return;
     }
 
@@ -43,6 +43,8 @@ const Faqs = () => {
     getFaqs();
   };
 
+
+  //DELETE
   const handleDelete = async (e, id) => {
     e.preventDefault();
     let response = await fetch("http://localhost:3000/api/faq?id=" + id, {
@@ -53,6 +55,8 @@ const Faqs = () => {
     getFaqs();
   };
 
+
+  //UPDATE
   const handleUpdate = async (event) => {
     event.preventDefault();
 
@@ -105,54 +109,56 @@ const Faqs = () => {
         })}
       </div>
 
-      <h3>Add New Question and Answer</h3>
+      <h3>Add New</h3>
 
       <form className={styles.form} onSubmit={handleSubmit}>
-        <input
-          type="question"
-          name="question"
-          placeholder="Question"
-          defaultValue={""}
-        />
+        <label>
+          Question?
+          <input type="question" name="question" defaultValue={""} />
+        </label>
 
-        <textarea
-          type="answer"
-          name="answer"
-          placeholder="answer"
-          defaultValue={""}
-        />
+        <label>
+          Answer
+          <textarea type="answer" name="answer" defaultValue={""} />
+        </label>
 
         <button>Upload</button>
       </form>
 
-      <h3>Update Existing Question and Answer</h3>
+      <h3>Update</h3>
 
       <form className={styles.form} onSubmit={handleUpdate}>
-        <input
-          type="text"
-          name="id"
-          placeholder="ID"
-          value={id}
-          onChange={(e) => setId(e.target.value)}
-        />
+        <label>
+          ID:
+          <input
+            type="text"
+            name="id"
+            value={id}
+            onChange={(e) => setId(e.target.value)}
+          />
+        </label>
 
-        <input
-          type="text"
-          name="question"
-          placeholder="Question"
-          value={question}
-          onChange={(e) => setQuestion(e.target.value)}
-        />
+        <label>
+          Question:
+          <input
+            type="text"
+            name="question"
+            value={question}
+            onChange={(e) => setQuestion(e.target.value)}
+          />
+        </label>
 
-        <textarea
-          type="text"
-          name="answer"
-          placeholder="Answer"
-          value={answer}
-          onChange={(e) => setAnswer(e.target.value)}
-        />
+        <label>
+          Answer:
+          <textarea
+            type="text"
+            name="answer"
+            value={answer}
+            onChange={(e) => setAnswer(e.target.value)}
+          />
+        </label>
 
-        <button>Upload</button>
+        <button>Update</button>
       </form>
     </div>
   );

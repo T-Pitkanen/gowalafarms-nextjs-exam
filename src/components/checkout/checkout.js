@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 const Checkout = () => {
-  const { basket, addToBasket, cleanBasket, getProductsForBasket } =
+  const { basket, addToBasket, getProductsForBasket } =
     useBasket();
 
   const [basketItems, setBasketItems] = useState([]);
@@ -21,6 +21,7 @@ const Checkout = () => {
     };
 
     getProducts();
+    //if empty, will be only called once
   }, [getProductsForBasket]);
 
   const handleCheckout = async () => {

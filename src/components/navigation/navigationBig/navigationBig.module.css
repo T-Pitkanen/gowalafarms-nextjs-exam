@@ -1,5 +1,5 @@
 .navigation {
-    width: 100%;
+  width: 100%;
   z-index: 100;
   position: fixed;
 }
@@ -34,21 +34,19 @@
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 20px;
-  
 }
 
-.naviLinks a:hover{
-    transition: all 0.3s ease-in-out;
-    background-color: var(--color-green);
-    color: #ffffff;
-    font-weight: 400;
+.naviLinks a:hover {
+  transition: all 0.3s ease-in-out;
+  background-color: var(--color-green);
+  color: #ffffff;
+  font-weight: 400;
 }
 
 .navigation .navigationBar .actions {
   display: flex;
   gap: 10px;
 }
-
 
 .navigation .menuPanel {
   position: absolute;
@@ -70,7 +68,6 @@
   padding-left: 2em;
 }
 
-
 .navigation .basket {
   position: absolute;
   transition: top 0.5s ease-in-out;
@@ -80,7 +77,6 @@
   background-color: rgba(255, 255, 255, 0.89);
   color: black;
   height: auto;
-  
 }
 
 .navigation .menu.active {
@@ -104,8 +100,8 @@
   color: var(--color-green);
 }
 
-.cart svg{
-    font-size: 1.5em;
+.cart svg {
+  font-size: 1.5em;
 }
 
 .cartCount {
@@ -113,15 +109,9 @@
 }
 
 @media (min-width: 1024px) {
-
-
   .navigation .basket {
- 
     width: 40%;
-
-    
   }
-
 
   .navigation .navigationBar {
     padding: 0 10rem;

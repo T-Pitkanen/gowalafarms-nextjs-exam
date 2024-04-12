@@ -4,59 +4,50 @@
   height: 100vh;
 }
 
-
-
 .container h3 {
-    font-size: 1.75em;
-    margin-top: 10vh;
-    padding-bottom: 2vh;
+  font-size: 1.75em;
+  margin-top: 10vh;
+  padding-bottom: 2vh;
 }
 
-.container h2{
-    font-size: 2em;
-
+.container h2 {
+  font-size: 2em;
 }
 
-.container form{
-    display: flex;
-    align-items: center;
-    gap: 5em;
+.container form {
+  display: flex;
+  align-items: center;
+  gap: 5em;
 }
 
-.container label{
-    display: flex;
-    gap: 1em;
+.container label {
+  display: flex;
+  gap: 1em;
 }
 
-.affiliateImg{
-    object-fit: contain;
+.affiliateImg {
+  object-fit: contain;
 }
 
-.affiliateContainer{
-    padding-right: 5em;
+.affiliateContainer {
+  padding-right: 5em;
 }
 
 .container button {
-    background-color: var(--red-color);
-    border: none;
-    color: white;
-    padding: 1em 2em;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    margin: 4px 2px;
-    cursor: pointer;
-    font-weight: 600;
+  background-color: var(--color-green);
+  border: none;
+  color: white;
+  padding: 1em 2em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-weight: 600;
 }
 
 
-
-
-
-.container input[type="file"] {
-    /* visibility: hidden; */
-}
 
 @media screen and (min-width: 1024px) {
   .container {
@@ -68,8 +59,3 @@
     line-height: 52px;
   }
 }
-
-
-
-
-

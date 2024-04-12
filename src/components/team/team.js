@@ -46,8 +46,11 @@ const Team = () => {
             width={500}
             height={500}
           />
+
+          
           <div
             className={styles.overlay}
+          // check if the employee is expanded, with id,  and toggle the expanded state
             onClick={() =>
               setExpandedEmployeeId((prevId) =>
                 prevId === employee._id ? null : employee._id
