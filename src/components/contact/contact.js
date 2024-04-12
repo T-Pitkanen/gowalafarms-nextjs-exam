@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -11,12 +10,19 @@ const Contact = () => {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [nameError, setNameError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [phoneError, setPhoneError] = useState("");
+  const [messageError, setMessageError] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
   const schema = Yup.object().shape({
-    name: Yup.string().required("Required"),
-    email: Yup.string().email("Invalid email address").required("Required"),
-    phone: Yup.string().required("Required"),
-    message: Yup.string().required("Required"),
+    name: Yup.string().required("Name is required"),
+    email: Yup.string()
+      .email("Invalid email address")
+      .required("Email is required"),
+    phone: Yup.string().required("Phone Number is required"),
+    message: Yup.string().required("Type a message to send"),
   });
 
   const handleSubmit = async (event) => {
@@ -48,9 +54,37 @@ const Contact = () => {
 
       const data = await response.json();
       console.log(data);
+
+      setName("");
+      setEmail("");
+      setPhone("");
+      setMessage("");
+
+      setSuccessMessage("Thank You for your message!");
+
+      setTimeout(() => {
+        setSuccessMessage("");
+      }, 5000);
     } catch (error) {
       if (error instanceof Yup.ValidationError) {
-        setErrorMessage(error.message);
+        error.inner.forEach((err) => {
+          switch (err.path) {
+            case "name":
+              setNameError(err.message);
+              break;
+            case "email":
+              setEmailError(err.message);
+              break;
+            case "phone":
+              setPhoneError(err.message);
+              break;
+            case "message":
+              setMessageError(err.message);
+              break;
+            default:
+              break;
+          }
+        });
       } else {
         console.error(error);
       }
@@ -61,37 +95,62 @@ const Contact = () => {
     <div className={styles.container}>
       <h1>Send a message to us</h1>
       {errorMessage && <p className={styles.errorMessage}>{errorMessage}</p>}
+      {successMessage && (
+        <p className={styles.successMessage}>{successMessage}</p>
+      )}
       <form className={styles.form} onSubmit={handleSubmit}>
         <label>
-          Name:
+          
           <input
             type="text"
             value={name}
-            onChange={(e) => setName(e.target.value)}
+            placeholder="Your name"
+            onChange={(e) => {
+              setName(e.target.value);
+              setNameError("");
+            }}
           />
+          {nameError && <p className={styles.errorMessage}>{nameError}</p>}
         </label>
         <label>
-          Email:
+         
           <input
             type="email"
+            placeholder="Your E-Mail"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => {
+              setName(e.target.value);
+              setEmailError("");
+            }}
           />
+          {emailError && <p className={styles.errorMessage}>{emailError}</p>}
         </label>
         <label>
-          Phone:
+          
           <input
             type="tel"
             value={phone}
-            onChange={(e) => setPhone(e.target.value)}
+            placeholder="Phone Number"
+            onChange={(e) => {
+              setName(e.target.value);
+              setPhoneError("");
+            }}
           />
+          {phoneError && <p className={styles.errorMessage}>{phoneError}</p>}
         </label>
         <label>
-          Message:
+       
           <textarea
             value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            placeholder="Your message"
+            onChange={(e) => {
+              setName(e.target.value);
+              setMessageError("");
+            }}
           />
+          {messageError && (
+            <p className={styles.errorMessage}>{messageError}</p>
+          )}
         </label>
         <button type="submit">Send Message</button>
       </form>

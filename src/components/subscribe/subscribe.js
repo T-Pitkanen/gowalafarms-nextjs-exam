@@ -1,12 +1,13 @@
-
 "use client";
 
 import { useState } from "react";
 import styles from "./subscribe.module.css";
 
 const Subscribe = () => {
+  const [showModal, setShowModal] = useState(false);
   const [email, setEmail] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [submittedEmail, setSubmittedEmail] = useState("");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -21,6 +22,7 @@ const Subscribe = () => {
     }
 
     setEmail(email);
+    setShowModal(true);
 
     try {
       const response = await fetch("http://localhost:3000/api/subscriber", {
@@ -36,6 +38,7 @@ const Subscribe = () => {
       const data = await response.json();
       console.log("Server response:", data);
 
+      setSubmittedEmail(email);
       setEmail("");
     } catch (error) {
       console.error(error);
@@ -52,7 +55,9 @@ const Subscribe = () => {
             Continually productize compelling quality for packed with Elated
             Themes Setting up to website and it crating pages .
           </p>
-          {errorMessage && <p className={styles.errorMessage}>{errorMessage}</p>}
+          {errorMessage && (
+            <p className={styles.errorMessage}>{errorMessage}</p>
+          )}
         </div>
 
         <form onSubmit={handleSubmit}>
@@ -63,12 +68,30 @@ const Subscribe = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <button type="submit">Subscribe</button>
+          <button className={styles.submit} type="submit">
+            Subscribe
+          </button>
         </form>
+
+        {showModal && (
+          <div className={styles.modal}>
+            <div className={styles.modalContainer}>
+              <button
+                className={styles.closeButton}
+                onClick={() => setShowModal(false)}
+              >
+                X
+              </button>
+              <h1 className={styles.modalHeader}>Thank You!</h1>
+              <span className={styles.subName}>{submittedEmail}</span>
+              <h2>What is your favorite?</h2>
+              <p>Continually productize compelling quality for packed with Elated Themes Setting up to website and it crating pages .</p>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
 };
 
 export default Subscribe;
-

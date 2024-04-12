@@ -40,6 +40,13 @@
 .overlay h2,
 .overlay h3 {
   font-size: 1.25em;
+
+}
+
+.overlayIcon{
+  padding-top: 1vh;
+  font-size: 1.2em;
+  cursor: pointer;
 }
 
 .overlay p {

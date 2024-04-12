@@ -5,7 +5,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 4em;
+    gap: 1em;
+    background-color: #EFF4F8;
+    padding: 2em 0.5em;
 }
 
 
@@ -19,9 +21,11 @@
 
 .form input, .form textarea{
     
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid rgb(230, 230, 230);
-    padding: 0.5em;
+    padding: 1em 0.75em;
+    font-family: inherit;
+    font-size: 1em;
 }
 
 .form, .form label{
@@ -36,11 +40,29 @@
     color: white;
 }
 
+.successMessage{
+    color: var(--color-green);
+    font-size: 1.5em;
+    text-align: center;
+
+}
+
+.errorMessage{
+    font-size: 15px;
+    padding: 2vw;
+    color: rgb(182, 61, 61);
+}
+
 @media screen and (min-width: 1024px) {
     .container{
         gap: 1em;
         height: 100%;
         padding: 2em 0;
       background-color: #EFF4F8;
+    }
+    .errorMessage{
+        
+        padding: 1vw;
+      
     }
   }
