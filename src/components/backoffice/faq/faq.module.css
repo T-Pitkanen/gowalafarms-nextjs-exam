@@ -1,21 +1,30 @@
 .container {
-
-
   width: 80%;
   margin: 10vh auto;
-
-  font-family: Arial, sans-serif;
 }
 
-.container h3{
-
-
+.container h3 {
   margin-top: 10vh;
 }
 
+.faqHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2em;
+}
+
+.faqHeader button {
+  padding: 1em;
+  border: none;
+  background-color: var(--color-green);
+
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
 .faq {
-
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -26,8 +35,6 @@
 }
 
 .faqContainer {
-
-
   display: flex;
   flex-direction: column;
 
@@ -40,25 +47,21 @@
   gap: 2em;
 }
 
-.faqContainer button{
+.faqContainer button {
+  padding: 1em;
+  border: none;
+  background-color: var(--color-green);
 
-
-    padding: 1em;
-    border: none;
-    background-color: var(--color-green);
-
-    color: white;
+  color: white;
+  cursor: pointer;
 }
 
 .form {
-
   width: 50%;
   margin-top: 20px;
 }
 
 .form label {
-
-
   display: block;
 
   margin-bottom: 10px;
@@ -66,8 +69,6 @@
 
 .form input,
 .form textarea {
-
-
   width: 100%;
   margin-bottom: 20px;
   padding: 10px;
@@ -76,8 +77,6 @@
 }
 
 .form button {
-
-
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
