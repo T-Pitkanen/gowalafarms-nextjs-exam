@@ -10,7 +10,7 @@
     "seed": "node -r dotenv/config ./src/lib/db/seed/seeddb.mjs"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.540.0",
+    "@aws-sdk/client-s3": "^3.624.0",
     "@uidotdev/usehooks": "^2.4.1",
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.4.5",
